@@ -9,6 +9,9 @@ import { Link } from 'react-router-dom'
 import { API_KEY } from '../../data'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { value_converter } from '../../data'
+import moment from 'moment'
+
 
 const Feed = ({category}) => {
 
@@ -27,11 +30,11 @@ const Feed = ({category}) => {
     <div className="feed">
         {data.map((item,index)=>{
             return (
-        <Link to={`video/${item.snippeet.categoryID}/${item.id}`} className='card'>
+        <Link to={`video/${item.snippet.categoryId}/${item.id}`} className="card" key={index}>
         <img src={item.snippet.thumbnails.medium.url} alt="" />
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2 days ago</p>
+        <h2>{item.snippet.title}</h2>
+        <h3>{item.snippet.channelTitle}</h3>
+        <p>{value_converter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
       </Link>
             )
         })}
