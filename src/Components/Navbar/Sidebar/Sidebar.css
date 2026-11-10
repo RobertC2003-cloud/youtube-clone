@@ -67,3 +67,9 @@
     width: 25px;
     margin-right: 20px;
 }
+
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+}
