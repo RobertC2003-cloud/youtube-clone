@@ -30,7 +30,7 @@ const Recommended = ({categoryId}) => {
       <div className="vid-info">
         <h4>{item.snippet.title}</h4>
         <p>{item.snippet.channelTitle}</p>
-        <p>{value_converter(item.statistics.viewCount)}</p>
+        <p>{value_converter(item.statistics.viewCount)} views</p>
       </div>
     </Link>
   );

@@ -14,7 +14,7 @@ nav {
 }
 
 .nav-left .logo{
-    width:130px;
+    width:90px;
 }
 
 .nav-middle .search-box{
@@ -35,7 +35,7 @@ nav {
     width: 15px;
 }
 
-.nav-right .img{
+.nav-right img{
     width: 25px;
     margin-right: 25px;
 }
