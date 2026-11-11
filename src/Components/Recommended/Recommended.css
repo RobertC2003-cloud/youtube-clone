@@ -25,5 +25,16 @@
 @media (max-width: 900px) {
     .recommended {
         flex-basis: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 16px;
+    }
+
+    .side-video-list {
+        flex-direction: column;
+    }
+
+    .side-video-list img {
+        width: 100%;
     }
 }
