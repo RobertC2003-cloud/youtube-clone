@@ -41,9 +41,11 @@ const PlayVideo = () => {
         fetchVideoData();
     },[videoId])
 
-    useEffect(()=>{
-        fetchOtherData();
-    },[apiData])
+    useEffect(() => {
+  if (apiData) {
+    fetchOtherData();
+  }
+}, [apiData]);
 
   return (
     <div className='play-video'>
@@ -61,7 +63,12 @@ const PlayVideo = () => {
         </div>
         <hr />
         <div className="publisher">
-            <img src={channelData?channelData.snippet.thumbnails.default.url:""} alt="" />
+            {channelData && (
+  <img
+    src={channelData.snippet.thumbnails.default.url}
+    alt="Channel profile"
+  />
+)}
             <div>
                 <p>{apiData?apiData.snippet.channelTitle:""}</p>
                 <span>{channelData?value_converter(channelData.statistics.subscriberCount):"1M"} Subscribers</span>

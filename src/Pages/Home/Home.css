@@ -10,19 +10,20 @@
     padding-left: 7%;
 }
 
-@media (max-width: 900px) {
-    .large-container , .container {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 22%;
+  }
+
+  .large-container {
+    padding-left: 7%;
+  }
 }
 
-@media (max-width: 1200px) {
-    .container {
-        padding-left: 22%;
-    }
-
-    .large-container {
-        padding-left: 7%;
-    }
+@media (max-width: 900px) {
+  .container,
+  .large-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
